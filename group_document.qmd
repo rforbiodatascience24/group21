@@ -46,6 +46,15 @@ avg <- (203523 + 203564 + 243559 + 193769 + 203544) / 5
 avg
 ```
 
+New feature
+
+```{r}
+stu_num <- c(203523, 203564, 243559, 193769, 203544)
+stu_stat <- c(sum(stu_num), mean(stu_num), sd(stu_num))
+
+stu_stat
+```
+
 ### Andrea (s193769)
 
 HEJ!
