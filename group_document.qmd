@@ -54,6 +54,12 @@ HEJ!
 library("tidyverse")
 ```
 
+#### New analysis
+
+```{r}
+2+3
+```
+
 ### Asta (s203544)
 
 Hello
