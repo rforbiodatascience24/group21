@@ -13,6 +13,16 @@ b<-5
 b+3
 ```
 
+### New analysis
+
+So this is a very exciting analysis where I will multiply two numbers
+
+```{r}
+number1<-5
+number2<-9
+analysis<-number1*number2
+```
+
 ### Emma (s203564)
 
 Hi my name is Emma.
