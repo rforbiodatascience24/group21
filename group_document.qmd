@@ -62,7 +62,7 @@ Hello
 2+2
 ```
 
-#### New analysis  
+#### New analysis
 
 Make an analysis
 
