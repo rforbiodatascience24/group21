@@ -36,7 +36,7 @@ For making a PCA plot, we need to do the following three things:
 
 3.  Look at the variance explained by each PC
 
-## 1. Look at the data in PC coordinates
+## Look at the data in PC coordinates
 
 ```{r}
 #| label: "Look-at-the-data-in-PC-coordinates"
@@ -49,6 +49,8 @@ pca_fit
 
 
 ```
+
+### Plot the data in PC coordinates 
 
 ```{r}
 #| label: "Plot-data-in-PC-coordinates"
@@ -66,7 +68,7 @@ pca_fit |>
 
 ```
 
-## Rotation Matrix 
+## Rotation matrix
 
 ```{r}
 pca_fit |> 
@@ -105,3 +107,30 @@ pca_fit %>%
 ### 
 
 ## Look at the variance explained by each PC
+
+We will now extract the variance that is explained by each PC.
+
+```{r}
+#| label: "Extract-variance-using-tidy-function-from-broom"
+
+pca_fit |> 
+  tidy(matrix = "eigenvalues")
+```
+
+### Plotting a histogram
+
+```{r}
+#| label: "Histogram-for-variance"
+
+pca_fit |> 
+  tidy(matrix = "eigenvalues") |> 
+  ggplot(aes(PC, percent)) +
+  geom_col(fill = "#56B4E9", alpha = 0.8) +
+  scale_x_continuous(breaks = 1:9) +
+  scale_y_continuous(
+    labels = scales::percent_format(),
+    expand = expansion(mult = c(0, 0.01))
+  ) +
+  theme_minimal_hgrid(12)
+
+```
