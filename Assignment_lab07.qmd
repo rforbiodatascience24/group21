@@ -9,7 +9,10 @@ editor: visual
 ```{r}
 #| echo: FALSE
 #| message: false
+
 library("tidyverse")
+library("broom")
+library("cowplot")
 ```
 
 ## Load data
@@ -25,14 +28,41 @@ biopsy <- read_csv("https://wilkelab.org/classes/SDS348/data_sets/biopsy.csv")
 
 ## Performing a PCA plot
 
+Mor making a PCA plot, we need to do the following three things:
+
 1.  Look at the data in PC coordinates.
 
 2.  Look at the rotation matrix.
 
 3.  Look at the variance explained by each PC
 
-## Look at the data in PC coordinates
+## 1. Look at the data in PC coordinates
 
-## 
+```{r}
+#| label: "Look-at-the-data-in-PC-coordinates"
+
+pca_fit <- biopsy |> 
+  select(where(is.numeric)) |>  # retain only numeric columns
+  prcomp(scale = TRUE) # do PCA on scaled data
+
+pca_fit
+
+```
+
+```{r}
+#| label: "Plot-data-in-PC-coordinates"
+#| fig-width: 6
+#| fig-height: 5
+
+pca_fit |> 
+  augment(biopsy) |>
+  ggplot(aes(.fittedPC1, .fittedPC2, color = outcome)) + 
+  geom_point(size = 1.5) +
+  scale_color_manual(
+    values = c(malignant = "#D55E00", benign = "#0072B2")
+  ) +
+  theme_half_open(12) + background_grid()
+
+```
 
 ## Look at the variance explained by each PC
