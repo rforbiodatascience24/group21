@@ -8,12 +8,17 @@ editor: visual
 
 ```{r}
 #| echo: FALSE
+#| message: false
 library("tidyverse")
 ```
 
 ## Load data
 
 ```{r}
+#| echo: false 
+#| eval: false
+#| message: false
+
 biopsy <- read_csv("https://wilkelab.org/classes/SDS348/data_sets/biopsy.csv")
 
 ```
