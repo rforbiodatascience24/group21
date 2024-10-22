@@ -6,6 +6,13 @@ editor: visual
 
 ### Astrid (s203523)
 
+biology is like magic - but real
+
+```{r}
+b<-5
+b+3
+```
+
 ### Emma (s203564)
 
 ### Yayi (s243559)
