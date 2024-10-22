@@ -12,4 +12,10 @@ editor: visual
 
 ### Andrea (s193769)
 
+HEJ!
+
+```{r}
+library("tidyverse")
+```
+
 ### Asta (s203544)
