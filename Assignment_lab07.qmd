@@ -4,4 +4,16 @@ format: html
 editor: visual
 ---
 
-## 
+## Load libraries 
+
+```{r}
+#| echo: FALSE
+library("tidyverse")
+```
+
+## Load data 
+
+```{r}
+biopsy <- read_csv("https://wilkelab.org/classes/SDS348/data_sets/biopsy.csv")
+
+```
