@@ -18,6 +18,16 @@ biopsy <- read_csv("https://wilkelab.org/classes/SDS348/data_sets/biopsy.csv")
 
 ```
 
+## Performing a PCA plot 
+
+1.  Look at the data in PC coordinates.
+
+2.  Look at the rotation matrix.
+
+3.  Look at the variance explained by each PC
+
 ## Look at the data in PC coordinates
+
+## 
 
 ## Look at the variance explained by each PC
