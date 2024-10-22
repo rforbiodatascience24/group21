@@ -50,7 +50,7 @@ pca_fit
 
 ```
 
-### Plot the data in PC coordinates 
+### Plot the data in PC coordinates
 
 ```{r}
 #| label: "Plot-data-in-PC-coordinates"
