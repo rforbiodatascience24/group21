@@ -10,6 +10,14 @@ editor: visual
 
 ### Yayi (s243559)
 
+calculate the average of student number
+
+```{r}
+avg <- (203523 + 203564 + 243559 + 193769 + 203544) / 5
+
+avg
+```
+
 ### Andrea (s193769)
 
 ### Asta (s203544)
