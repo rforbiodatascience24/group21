@@ -15,8 +15,43 @@ b+3
 
 ### Emma (s203564)
 
+Hi my name is Emma.
+
+I will add a chunk of code:
+
+```{r}
+#| label: "code1"
+
+2 + 2
+
+```
+
+```{r}
+#| label: "code2"
+
+x <- c(3, 5, 1, 7, 34, 6, 5, 8, 90)
+
+sum(x)
+mean(x)
+sd(x)
+```
+
 ### Yayi (s243559)
+
+calculate the average of student number
+
+```{r}
+avg <- (203523 + 203564 + 243559 + 193769 + 203544) / 5
+
+avg
+```
 
 ### Andrea (s193769)
 
 ### Asta (s203544)
+
+Hello
+
+```{r}
+2+2
+```
