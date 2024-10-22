@@ -8,6 +8,27 @@ editor: visual
 
 ### Emma (s203564)
 
+Hi my name is Emma.
+
+I will add a chunk of code:
+
+```{r}
+#| label: "code1"
+
+2 + 2
+
+```
+
+```{r}
+#| label: "code2"
+
+x <- c(3, 5, 1, 7, 34, 6, 5, 8, 90)
+
+sum(x)
+mean(x)
+sd(x)
+```
+
 ### Yayi (s243559)
 
 ### Andrea (s193769)
