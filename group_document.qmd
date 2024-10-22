@@ -13,3 +13,9 @@ editor: visual
 ### Andrea (s193769)
 
 ### Asta (s203544)
+
+Hello
+
+```{r}
+2+2
+```
