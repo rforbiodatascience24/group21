@@ -4,23 +4,35 @@ format: html
 editor: visual
 ---
 
+# Principal Component Analysis (PCA) using tidyverse
+
+#### Group 21:
+
+Asta Zeuner: s203544\
+Emma Danø: s203564\
+Astrid Ginnerup: s203523\
+Andrea Kristensen: s193769\
+Yayi Wang: s243554
+
 ## Load libraries
 
 ```{r}
 #| lable: libraries
-#| echo: FALSE
+#| echo: false
 #| message: false
 
 library("tidyverse")
 library("broom")
-library("cowplot")
+library("cowplot") #for plot themes 
 ```
 
 ## Load data
 
+Analysing the biopsy dataset. It is a breast cancer dataset from the university of Wisconsin Hospitals.
+
 ```{r}
 #| label: load-data
-#| echo: false 
+#| echo: false
 #| eval: false
 #| message: false
 
@@ -40,6 +52,8 @@ For making a PCA plot, we need to do the following three things:
 
 ## Look at the data in PC coordinates
 
+Running the PSA using the prcomp() and storing it in the pca_fit.
+
 ```{r}
 #| label: Look-at-the-data-in-PC-coordinates
 
@@ -53,6 +67,8 @@ pca_fit
 ```
 
 ### Plot the data in PC coordinates
+
+Combining the PC coordinates with the original dataset, using the augment() function.
 
 ```{r}
 #| label: Plot-data-in-PC-coordinates
@@ -70,7 +86,11 @@ pca_fit |>
 
 ```
 
+The plot nicely seperates the benign samples from the malignant samples.
+
 ## Rotation matrix
+
+Extract the rotation matrix using tidy()
 
 ```{r}
 pca_fit |> 
@@ -110,7 +130,7 @@ pca_fit %>%
 
 ## Look at the variance explained by each PC
 
-We will now extract the variance that is explained by each PC.
+We will now extract the variance that is explained by each PC using the tidy() function.
 
 ```{r}
 #| label: Extract-variance-using-tidy-function-from-broom
@@ -136,3 +156,5 @@ pca_fit |>
   theme_minimal_hgrid(12)
 
 ```
+
+The first component captures 65% of the variaiton in the data.
