@@ -18,7 +18,7 @@ Yayi Wang: s243554
 
 ```{r}
 #| lable: libraries
-#| echo: false
+#| echo: True 
 #| message: false
 
 library("tidyverse")
@@ -28,11 +28,11 @@ library("cowplot") #for plot themes
 
 ## Load data
 
-Analysing the biopsy dataset. It is a breast cancer dataset from the university of Wisconsin Hospitals.
+Analyzing the biopsy dataset. It is a breast cancer dataset from the university of Wisconsin Hospitals.
 
 ```{r}
 #| label: load-data
-#| echo: false
+#| echo: true
 #| eval: false
 #| message: false
 
